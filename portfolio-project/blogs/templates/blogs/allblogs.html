@@ -56,56 +56,33 @@
             <div class="navbar-nav ml-auto">
               <a class="nav-link" href="https://www.linkedin.com/in/tashinga-musanhu/">LinkedIn</a>
               <a class="nav-link" href="https://github.com/Tashsub">Github</a>
-              <a class="nav-link" href="{% url 'allblogs'%}">Blog</a>
+              <a class="nav-link active" href="{url 'allblogs'}">Blog</a>
             </div>
           </div>
         </nav>
     </header>
+
 <main role="main">
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Hi, I'm Tash</h1>
-      <p class="lead text-muted">Thanks for stopping by, below are some projects I've
-          developed including the website you're looking at right now. I enjoy learning new things 
-           and solving probelems that often require coming up with creative solutions</p>
-      <p>
-        <p class="lead text-muted"></p>
-        <p></p>
-        <img class="img-fluid rounded-circle" src="{% static 'portpic.jpg' %}" height="400" width="200"/>
-        <br/> 
-        <p></p>
-        <a href="https://www.linkedin.com/in/tashinga-musanhu/" class="btn btn-primary my-2">LinkedIn</a>
-        <a href="https://github.com/Tashsub" class="btn btn-primary my-2">Github</a>
-      <p class="lead text-muted">Langauges: Python, Java, HTML, CSS, Javascript</p>
-      <p class="lead text-muted">Frameworks: Django, Flask </p>
-      <p class="lead text-muted">SQL: PostgreSQL, SQLite, MYSQL </p>
-      <p class="lead text-muted">Version Control: Git, Butbucket </p>
-      <p class="lead text-muted">Styled Components: AdobeXD, Figma </p>
-      
-      </p>
-    </div>
-  </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div>
-              <h5 class="card-title text-center" >{{ job.project_name }}</h5>
-            </div>
-            <img class="bd-placeholder-img card-img-top " height="" src="{{job.image.url}}"/>
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
+<div class="container">
+    <h1 class="text-center pt-4">Welcome to my blog!</h1>
+    <br/>
+    <br/>
+    <h1>Latest Blogs</h1>
+    <hr />
+</div>
 
+{% for blogitems in blogs.all %}
+    <div class="text-center container">
+        <h2>{{ blogitems.title }}</h2>
+        <p>{{ blogitems.format_date }}</p>
+        <img class="img-fluid" width="50%" height="60%" src={{blogitems.image.url}} />
+        <p>{{ blogitems.body }}</p>
+
+        <hr />
+    </div>
+{% endfor %}
+ 
 </main>
 
 <footer class="text-muted">

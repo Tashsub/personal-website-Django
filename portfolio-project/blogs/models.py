@@ -6,4 +6,10 @@ class Blog(models.Model):
     body = models.TextField()
     image = models.ImageField(upload_to='images/')
 
+    def __str__(self):
+        return self.title
+
+    def format_date(self):
+        return self.pub_date.strftime('%B %d %Y')
+
     
