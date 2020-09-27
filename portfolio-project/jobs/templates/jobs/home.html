@@ -22,6 +22,7 @@
 <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
 <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
@@ -64,24 +65,35 @@
 <main role="main">
   <section class="jumbotron text-center">
     <div class="container">
-      <h1>Hi, I'm Tash</h1>
-      <p class="lead text-muted">Thanks for stopping by, below are some projects I've
-          developed including the website you're looking at right now. I enjoy learning new things 
-           and solving problems that often require coming up with creative solutions</p>
+      <h1>Hi, I'm Tash!</h1>
+      <p class="lead text-muted">Third year computer science student and graduating in 2021. 
+        I enjoy learning new things and solving problems that often require coming up with creative solutions. 
+      </p>
       <p>
         <p class="lead text-muted"></p>
         <p></p>
         <img class="img-fluid rounded-circle" src="{% static 'portpic.jpg' %}" height="400" width="200"/>
         <br/> 
         <p></p>
-        <a href="https://www.linkedin.com/in/tashinga-musanhu/" class="btn btn-primary my-2">LinkedIn</a>
-        <a href="https://github.com/Tashsub" class="btn btn-primary my-2">Github</a>
-      <p class="lead text-muted">Langauges: Python, Java, HTML, CSS, Javascript</p>
-      <p class="lead text-muted">Frameworks: Django, Flask </p>
-      <p class="lead text-muted">SQL: PostgreSQL, SQLite, MYSQL </p>
-      <p class="lead text-muted">Version Control: Git, Butbucket </p>
-      <p class="lead text-muted">Styled Components: AdobeXD, Figma </p>
-      
+        <a href="https://www.linkedin.com/in/tashinga-musanhu/" class="btn btn-primary my-2"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/Tashsub" class="btn btn-primary my-2"><i class="fab fa-github fa-2x"></i></a>
+      <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Click Here To See My Stack
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <p class="lead text-muted small"><b>Langauges:</b> Python, Java, HTML, CSS, Javascript</p>
+          <p class="lead text-muted small"><b>Frameworks:</b> Django, Flask </p>
+          <p class="lead text-muted small"><b>SQL: </b>PostgreSQL, SQLite, MYSQL </p>
+          <p class="lead text-muted small"><b>Version Control:</b> Git, Butbucket </p>
+          <p class="lead text-muted small"><b>Styled Components:</b> AdobeXD </p>
+        </div>
+      </div>
+      </p>
+      <p class="lead text-muted small">
+        This website is made using Python, HTML, CSS, Django and Digital Ocean
       </p>
     </div>
   </section>
